@@ -80,7 +80,7 @@
 		top:0px;
 		z-index:3;
 	}
-	canvas {
+	canvas{
 		filter: blur(2px);
 		-webkit-filter: blur(2px);
 		-moz-filter: blur(2px);
@@ -89,12 +89,18 @@
 		top:0px;
 		z-index:2;
 	}
+	p{
+		color:#FFFFFF;
+		font-size: 50px;
+		text-align: center;
+		margin:300px auto;
+	}
 </style>
 
 </head>
 
 <body onload="EraseBoarder()">
-
+	<p>Click the pen</p>
 	<div>
 		<canvas id = "myCanvas" width = '1920' height = '1080'></canvas>
 		<img src="bg.jpg" usemap="#bg" />
