@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -76,4 +77,118 @@ $ git checkout gh-pages
     
 
   </body>
+=======
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta charset="UTF-8" />
+<script>
+	function DrawBoarder()
+	{
+		var myCanvas = document.getElementById("myCanvas");
+		var context =  myCanvas.getContext("2d");
+
+		context.save();//保存状态
+		context.lineWidth = 2;//设置线宽
+		context.beginPath();
+		context.moveTo(1076, 902);
+		context.lineTo(1177, 934);
+		context.lineTo(1181, 932);
+		context.lineTo(1438, 1007);
+		context.lineTo(1452, 999);
+		context.lineTo(1439, 992);
+		context.lineTo(1444, 983);
+		context.lineTo(1440, 965);
+		context.lineTo(1226, 900);
+		context.lineTo(1220, 896);
+		context.lineTo(1091, 859);
+		context.lineTo(1080, 869);
+		context.lineTo(1079, 880);
+		context.lineTo(1075, 884);
+		context.lineTo(1081, 896);
+		context.closePath();
+		//10,10,50,200,80,100,200,200,100,80,200,50
+		context.strokeStyle ='rgb(0,0,255)';//填充绿色
+		context.stroke();
+		context.fillStyle ='rgba(255,0,0,.5)';//填充红色，半透明
+		context.fill();
+		context.restore();
+	}
+	function EraseBoarder()
+	{
+		var myCanvas = document.getElementById("myCanvas");
+		var context =  myCanvas.getContext("2d");
+
+		context.clearRect(1064,846,1463,1014);
+		context.save();//保存状态
+		context.lineWidth = 2;//设置线宽
+		context.beginPath();
+		context.moveTo(1076, 902);
+		context.lineTo(1177, 934);
+		context.lineTo(1181, 932);
+		context.lineTo(1438, 1007);
+		context.lineTo(1452, 999);
+		context.lineTo(1439, 992);
+		context.lineTo(1444, 983);
+		context.lineTo(1440, 965);
+		context.lineTo(1226, 900);
+		context.lineTo(1220, 896);
+		context.lineTo(1091, 859);
+		context.lineTo(1080, 869);
+		context.lineTo(1079, 880);
+		context.lineTo(1075, 884);
+		context.lineTo(1081, 896);
+		context.closePath();
+		//1076,902,1177,934,1181,932,1438,1007,1452,999,1439,992,1444,983,1440,965,1226,900,1220,896,1091,859,1080,869,1079,880,1075,884,1081,896
+		//1076,841,1177,873,1181,871,1438,946,1452,938,1439,931,1444,922,1440,904,1226,839,1220,835,1091,798,1080,808,1079,819,1075,823,1081,835
+		//10,10,50,200,80,100,200,200,100,80,200,50
+		context.strokeStyle ='#F6903C';
+		context.stroke();
+		context.restore();
+	}
+</script>
+<style>
+	body {
+		background-image:url(bg.jpg);
+		background-repeat:no-repeat;
+	}
+	img{
+		opacity: 0.0;
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:3;
+	}
+	canvas{
+		filter: blur(2px);
+		-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:2;
+	}
+	p{
+		color:#FFFFFF;
+		font-size: 50px;
+		text-align: center;
+		margin:300px auto;
+	}
+</style>
+
+</head>
+
+<body onload="EraseBoarder()">
+	<p>Click the pen</p>
+	<div>
+		<canvas id = "myCanvas" width = '1920' height = '1080'></canvas>
+		<img src="bg.jpg" usemap="#bg" />
+		<map name="bg">
+			<area shape="poly" coords="1076,902,1177,934,1181,932,1438,1007,1452,999,1439,992,1444,983,1440,965,1226,900,1220,896,1091,859,1080,869,1079,880,1075,884,1081,896" href="write.html" onmouseover="DrawBoarder()" onmouseout="EraseBoarder()"/>
+		</map>
+	</div>
+
+</body>
+>>>>>>> 0f08b7bf0932615057f0ffe7b74ab3dd071093e0
 </html>
